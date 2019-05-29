@@ -32,8 +32,9 @@
     ```
 
     This method for providing values is used in the `main.tf` file of this repository. When `terraform plan` is executed, Terraform is going to prompt the user for `var.access_key` and `var.secret_key`. 
-    There are other methods to provide the values for those variables, for example to use `variables.tf` and `terraform.tfvars` files. The file `variables.tf` is used to define/declare the variables and `terraform.tfvars` to pass the value for variables defined in `variables.tf`. This method is going to be used for providing the `var.region` variable. 
-    This way the user can have all the variables defined in the `variable.tf` needed for the Terraform code execution, but providing different values based on the environment where the infrastructure is going to be deployed. For example UAT/stage/prod, or in the case of `var.region`, setting different region. Take a look at the `terraform.tfvars` it is a key-value pair looking file, the `region` variable is set to `us-east-2`, if this value is not provided the `default` setting from the `variables.tf` is going to be used.
+    
+- There are other methods to provide the values for those variables, for example to use `variables.tf` and `terraform.tfvars` files. The file `variables.tf` is used to define/declare the variables and `terraform.tfvars` to pass the value for variables defined in `variables.tf`. This method is going to be used for providing the `var.region` variable. 
+This way the user can have all the variables defined in the `variable.tf` needed for the Terraform code execution,but providing different values based on the environment where the infrastructure is going to be deployed. For exampleUAT/stage/prod, or in the case of `var.region`, setting different region. Take a look at the `terraform.tfvars` it isa key-value pair looking file, the `region` variable is set to `us-east-2`, if this value is not provided the`default` setting from the `variables.tf` is going to be used.
 
 
 ## How to use it :
