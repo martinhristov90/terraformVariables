@@ -38,6 +38,7 @@ This way the user can have all the variables defined in the `variable.tf` needed
 One other way is to use environmental variables for setting values of Terraform variables. For example `export TF_VAR_region = "us-east-1` is going to set the variable `region` to value `us-east-1`. This value will be retain until the current session of the shell is running, unless specified in `.bashrc` or `.bash_profile` for your user. 
 
 
+
 ## How to use it :
 
 - In a directory of your choice, clone the github repository 
