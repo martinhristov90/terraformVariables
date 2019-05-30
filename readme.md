@@ -35,6 +35,7 @@
     
 - There are other methods to provide the values for those variables, for example to use `variables.tf` and `terraform.tfvars` files. The file `variables.tf` is used to define/declare the variables and `terraform.tfvars` to pass the value for variables defined in `variables.tf`. This method is going to be used for providing the `var.region` variable. 
 This way the user can have all the variables defined in the `variable.tf` needed for the Terraform code execution,but providing different values based on the environment where the infrastructure is going to be deployed. For exampleUAT/stage/prod, or in the case of `var.region`, setting different region. Take a look at the `terraform.tfvars` it isa key-value pair looking file, the `region` variable is set to `us-east-2`, if this value is not provided the`default` setting from the `variables.tf` is going to be used.
+One other way is to use environmental variables for setting values of Terraform variables. For example `export TF_VAR_region = "us-east-1` is going to set the variable `region` to value `us-east-1`. This value will be retain until the current session of the shell is running, unless specified in `.bashrc` or `.bash_profile` for your user. 
 
 
 ## How to use it :
